@@ -1,0 +1,41 @@
+Script started on 2024-03-14 13:35:06+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="167" LINES="30"]
+[?2004h]0;vboxuser@codeby-DevOps: ~/codeby-devops/lesson4[01;32mvboxuser@codeby-DevOps[00m:[01;34m~/codeby-devops/lesson4[00m$ java -[K[K[K[K[K[Kexitcat typescript [9Pscriptcat typescript exit[Kkill 2016[5Pexitcat typescript [9Pscriptcat typescript exit[K[Kexitcat typescript [9Pscriptcat typescript exit[K[Kjava -version 
+[?2004ljava version "17.0.10" 2024-01-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.10+11-LTS-240)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.10+11-LTS-240, mixed mode, sharing)
+[?2004h]0;vboxuser@codeby-DevOps: ~/codeby-devops/lesson4[01;32mvboxuser@codeby-DevOps[00m:[01;34m~/codeby-devops/lesson4[00m$ [7mupdate-alternatives --config java[27mupdate-alternatives --config java
+[?2004lThere are 2 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                         Priority   Status
+------------------------------------------------------------
+* 0            /usr/lib/jvm/jdk-17-oracle-x64/bin/java       285294592 auto mode
+  1            /usr/lib/jvm/java-19-openjdk-amd64/bin/java   1911      manual mode
+  2            /usr/lib/jvm/jdk-17-oracle-x64/bin/java       285294592 manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 1
+update-alternatives: using /usr/lib/jvm/java-19-openjdk-amd64/bin/java to provide /usr/bin/java (java) in manual mode
+update-alternatives: error: error creating symbolic link '/etc/alternatives/java.dpkg-tmp': Permission denied
+[?2004h]0;vboxuser@codeby-DevOps: ~/codeby-devops/lesson4[01;32mvboxuser@codeby-DevOps[00m:[01;34m~/codeby-devops/lesson4[00m$ update-alternatives --config java[19Pjava -version 
+[?2004ljava version "17.0.10" 2024-01-16 LTS
+Java(TM) SE Runtime Environment (build 17.0.10+11-LTS-240)
+Java HotSpot(TM) 64-Bit Server VM (build 17.0.10+11-LTS-240, mixed mode, sharing)
+[?2004h]0;vboxuser@codeby-DevOps: ~/codeby-devops/lesson4[01;32mvboxuser@codeby-DevOps[00m:[01;34m~/codeby-devops/lesson4[00m$ java -version update-alternatives --config java[1@s[C[1@u[1@d[1@o[1@ 
+[?2004l[sudo] password for vboxuser: 
+There are 2 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                         Priority   Status
+------------------------------------------------------------
+* 0            /usr/lib/jvm/jdk-17-oracle-x64/bin/java       285294592 auto mode
+  1            /usr/lib/jvm/java-19-openjdk-amd64/bin/java   1911      manual mode
+  2            /usr/lib/jvm/jdk-17-oracle-x64/bin/java       285294592 manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 1
+update-alternatives: using /usr/lib/jvm/java-19-openjdk-amd64/bin/java to provide /usr/bin/java (java) in manual mode
+[?2004h]0;vboxuser@codeby-DevOps: ~/codeby-devops/lesson4[01;32mvboxuser@codeby-DevOps[00m:[01;34m~/codeby-devops/lesson4[00m$ sudo update-alternatives --config java[24Pjava -version 
+[?2004lopenjdk version "19.0.2" 2023-01-17
+OpenJDK Runtime Environment (build 19.0.2+7-Ubuntu-0ubuntu322.04)
+OpenJDK 64-Bit Server VM (build 19.0.2+7-Ubuntu-0ubuntu322.04, mixed mode, sharing)
+[?2004h]0;vboxuser@codeby-DevOps: ~/codeby-devops/lesson4[01;32mvboxuser@codeby-DevOps[00m:[01;34m~/codeby-devops/lesson4[00m$ exit
+[?2004lexit
+
+Script done on 2024-03-14 13:36:08+00:00 [COMMAND_EXIT_CODE="0"]

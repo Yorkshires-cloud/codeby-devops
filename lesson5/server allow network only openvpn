@@ -1,0 +1,16 @@
+vboxuser@codeby-DevOps-server:~/codeby-devops/lesson5$ sudo iptables -L -vn
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination
+    0     0 ACCEPT     all  --  tun+   *       0.0.0.0/0            0.0.0.0/0
+    0     0 ACCEPT     all  --  tap+   *       0.0.0.0/0            0.0.0.0/0
+
+Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination
+   14  1176 ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0            state RELATED,ESTABLISHED
+    2   168 ACCEPT     all  --  *      *       10.8.0.0/24          0.0.0.0/0
+    0     0 REJECT     all  --  *      *       0.0.0.0/0            0.0.0.0/0            reject-with icmp-port-unreachable
+    0     0 ACCEPT     all  --  tun+   *       0.0.0.0/0            0.0.0.0/0
+    0     0 ACCEPT     all  --  tap+   *       0.0.0.0/0            0.0.0.0/0
+
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+ pkts bytes target     prot opt in     out     source               destination

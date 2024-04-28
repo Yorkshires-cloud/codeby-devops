@@ -1,0 +1,37 @@
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2024-04-12 17:00:30 UTC; 7min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 5713 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
+   Main PID: 5717 (apache2)
+      Tasks: 55 (limit: 4598)
+     Memory: 5.6M
+        CPU: 43ms
+     CGroup: /system.slice/apache2.service
+             ├─5717 /usr/sbin/apache2 -k start
+             ├─5718 /usr/sbin/apache2 -k start
+             └─5719 /usr/sbin/apache2 -k start
+
+апр 12 17:00:30 codeby-DevOps systemd[1]: Starting The Apache HTTP Server...
+апр 12 17:00:30 codeby-DevOps apachectl[5716]: AH00112: Warning: DocumentRoot [/opt/apache/www/test.html] does not exist
+апр 12 17:00:30 codeby-DevOps systemd[1]: Started The Apache HTTP Server.
+
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2024-04-12 17:00:45 UTC; 7min ago
+       Docs: man:nginx(8)
+    Process: 5782 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 5783 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 5784 (nginx)
+      Tasks: 5 (limit: 4598)
+     Memory: 4.9M
+        CPU: 31ms
+     CGroup: /system.slice/nginx.service
+             ├─5784 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             ├─5785 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─5786 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─5787 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             └─5788 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+
+апр 12 17:00:45 codeby-DevOps systemd[1]: Starting A high performance web server and a reverse proxy server...
+апр 12 17:00:45 codeby-DevOps systemd[1]: Started A high performance web server and a reverse proxy server.

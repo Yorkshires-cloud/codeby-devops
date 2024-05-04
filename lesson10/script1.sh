@@ -3,6 +3,8 @@
 path=/home/vboxuser/myfolder
 chars=ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
+rm -r $path
+
 mkdir $path
 cd $path
 

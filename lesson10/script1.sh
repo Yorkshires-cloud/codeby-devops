@@ -3,7 +3,9 @@
 path=/home/vboxuser/myfolder
 chars=ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
-rm -r $path
+if [ -d "$path" ]; then
+        rm -r $path
+fi
 
 mkdir $path
 cd $path

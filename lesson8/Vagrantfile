@@ -1,0 +1,24 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure(2) do |config|
+ config.vm.box = "bento/ubuntu-20.04"
+ config.vm.box_check_update = false
+ 
+ config.vm.define "server" do |server|
+	server.vm.hostname = "server"
+	server.vm.network "public_network", ip: "192.168.1.201"
+	server.vm.provision "shell", path: "provision-server.sh"
+ end
+ 
+ config.vm.define "client" do |client|
+	client.vm.hostname = "client"
+	client.vm.network "public_network", ip: "192.168.1.200"
+	client.vm.provision "shell", path: "provision-client.sh"
+ end
+ 
+ config.vm.provider "virtualbox" do |vb|
+	vb.gui = false
+	vb.memory = "2048"
+ end
+ 
+end

@@ -1,0 +1,2 @@
+0 * * * * sh /scripts/mysql_backup.sh
+5 * * * * rsync -avz /opt/mysql_backup rsync://192.168.1.102:/share

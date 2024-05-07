@@ -3,10 +3,21 @@
 - name: "install packages"
   hosts: "all"
   become: true
+
   tasks:
+  - name: "update apt cache"
+    ansible.builtin.apt:
+      update_cache: true
   - name: "install wget"
     ansible.builtin.apt:
       name: "wget"
       state: "latest"
-      update_cache: true
+  - name: "install htop"
+    ansible.builtin.apt:
+      name: "htop"
+      state: "latest"
+  - name: "install nginx"
+    ansible.builtin.apt:
+      name: "nginx"
+      state: "latest"
 ...

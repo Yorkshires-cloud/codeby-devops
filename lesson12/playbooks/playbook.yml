@@ -1,0 +1,12 @@
+#Lesson12
+---
+- name: "install packages"
+  hosts: "all"
+
+  tasks:
+  - name: "install wget"
+    ansible.builtin.apt:
+      name: "wget"
+      state: "latest"
+      update_cache: true
+...

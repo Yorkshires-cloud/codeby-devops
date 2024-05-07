@@ -2,7 +2,7 @@
 ---
 - name: "install packages"
   hosts: "all"
-
+  become: true
   tasks:
   - name: "install wget"
     ansible.builtin.apt:

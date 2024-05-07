@@ -20,4 +20,9 @@
     ansible.builtin.apt:
       name: "nginx"
       state: "latest"
+  - name: "start nginx"
+    ansible.builtin.shell: systemctl start nginx
+  - name: "debug"
+    ansible.builtin.debug:
+      msg: This host is in {{ inventory_dir }} environment
 ...
